@@ -11,7 +11,7 @@ class OrderController extends Controller
 {
     public function getOrder()
     {
-        $orders = VpOrder::all();
+        $orders = VpOrder::paginate(3);
 
         return view('backend.order', compact('orders'));
     }

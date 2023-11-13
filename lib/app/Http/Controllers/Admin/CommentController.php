@@ -10,7 +10,7 @@ class CommentController extends Controller
 {
     public function getComment()
     {
-        $comments = VpComment::all();
+        $comments = VpComment::paginate(3);
 
         return view('backend.comment', compact('comments'));
     }

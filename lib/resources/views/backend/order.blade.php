@@ -27,6 +27,10 @@
     .update-status:hover {
         opacity: 0.9;
     }
+    .panel-body #pagination {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
@@ -75,6 +79,9 @@
                             </div>
                         </div>
                         @endforeach
+                        <div id="pagination">
+                            {{ $orders->links('vendor.pagination.default') }}
+                        </div>
                     </form>
                 </div>
 			</div>

@@ -1,23 +1,29 @@
 @extends('backend.master')
 @section('title', 'Danh sách sản phẩm')
-@section('main')		
+@section('main')
+<style>
+     .panel-body #pagination {
+        display: flex;
+        justify-content: center;
+    }
+</style>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<div class="col-lg-12">
 				<h1 class="page-header">Sản phẩm</h1>
 			</div>
 		</div><!--/.row-->
-		
+
 		<div class="row">
 			<div class="col-xs-12 col-md-12 col-lg-12">
-				
+
 				<div class="panel panel-primary">
 					<div class="panel-heading">Danh sách sản phẩm</div>
 					<div class="panel-body">
 						<div class="bootstrap-table">
 							<div class="table-responsive">
 								<a href="{{ asset('admin/product/create') }}" class="btn btn-primary">Thêm sản phẩm</a>
-								<table class="table table-bordered" style="margin-top:20px;">				
+								<table class="table table-bordered" style="margin-top:20px;">
 									<thead>
 										<tr class="bg-primary">
 											<th>ID</th>
@@ -45,7 +51,11 @@
 										</tr>
 										@endforeach
 									</tbody>
-								</table>							
+								</table>
+
+                                <div id="pagination">
+                                    {{ $product_list->links('vendor.pagination.default') }}
+                                </div>
 							</div>
 						</div>
 						<div class="clearfix"></div>

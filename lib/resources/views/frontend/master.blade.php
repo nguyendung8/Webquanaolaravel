@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>MLD Shop - @yield('title')</title>
+	<title>Chiến Đồ Nam - @yield('title')</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/home.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -43,71 +43,6 @@
                 font-size: 17px;
                 color: aliceblue;
                 text-decoration: none;
-            }
-            .contact-icon {
-                font-size: 31px;
-                position: fixed;
-                right: 51px;
-                bottom: 88px;
-                padding: 9px;
-                background: #ffc107;
-                border-radius: 50%;
-                color: #fff;
-                cursor: pointer;
-            }
-            .contact {
-                width: 260px;
-                position: fixed;
-                right: 52px;
-                bottom: 140px;
-                padding: 9px;
-                background: #fff;
-                border-radius: 7px;
-                cursor: pointer;
-                border: 1.5px solid #ffc107 !important;
-                box-sizing: border-box !important;
-                box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15) !important;
-                border-radius: 7px !important;
-            }
-            .contact-title {
-                font-size: 17px;
-				margin-top: 7px;
-            }
-            .contact label {
-                margin: 0;
-            }
-            .contact input {
-				border: none;
-                width: 100%;
-                border: 1px solid #d8d8d8;
-                border-radius: 3px ;
-                padding: 3px;
-                margin-bottom: 4px;
-            }
-            .contact input:focus {
-                border: 1px solid #ffc107 ;
-				outline: #ffc107;
-            }
-            .submit-contact-btn {
-                padding: 4px 17px;
-                border: none;
-                border-radius: 5px;
-                background: #ffc107;
-                color: #fff;
-                cursor: pos;
-                cursor: pointer;
-                margin-top: 6px;
-                float: right;
-            }
-			.close-btn {
-				position: absolute;
-				right: 9px;
-				top: 6px;
-				font-size: 21px;
-				color: #ffc107;
-			}
-            .hidden {
-                display: none;
             }
 			a:hover{
 				text-decoration: none !important;
@@ -153,7 +88,7 @@
 			}
 
 			#logo img {
-                width: 230px;
+                width: 100px;
                 padding: 15px 0px;
         	}
 
@@ -185,7 +120,7 @@
                 </div> -->
 				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
 					<a style="text-decoration: none;" href="{{ asset('/homepage') }}">
-					    <img src="img/home/logo2.png" alt="">
+					    <img src="img/home/logomain.png" alt="">
 					</a>
 				</div>
 
@@ -233,22 +168,22 @@
 
 					<div id="banner-l" class="text-center">
 						<div class="banner-l-item">
-							<a href="{{ asset('/homepage') }}"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/homepage') }}"><img src="img/home/banner1.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/homepage') }}"><img src="img/home/banner-l-2.png" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/homepage') }}"><img src="img/home/banner2.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/homepage') }}"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/homepage') }}"><img src="img/home/banner3.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/homepage') }}"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/homepage') }}"><img src="img/home/banner4.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/homepage') }}"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/homepage') }}"><img src="img/home/banner5.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="{{ asset('/homepage') }}"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
+							<a href="{{ asset('/homepage') }}"><img src="img/home/banner6.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						{{-- <div class="banner-l-item">
 							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
@@ -271,13 +206,13 @@
 							<!-- The slideshow -->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img src="img/home/slide-1.png" alt="Los Angeles" >
+									<img width="100%" height="415px" src="img/home/slider1.jpg" alt="Los Angeles" >
 								</div>
 								<div class="carousel-item">
-									<img src="img/home/slide-2.png" alt="Chicago">
+									<img width="100%" height="415px" src="img/home/slider2.jpg" alt="Chicago">
 								</div>
 								<div class="carousel-item">
-									<img src="img/home/slide-3.png" alt="New York" >
+									<img width="100%" height="415px" src="img/home/slider3.jpg" alt="New York" >
 								</div>
 							</div>
 
@@ -294,10 +229,10 @@
 					<div id="banner-t" class="text-center">
 						<div class="row">
 							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
-								<a href="{{ asset('/homepage') }}"><img src="img/home/banner-t-1.png" alt="" class="img-thumbnail"></a>
+								<a href="{{ asset('/homepage') }}"><img width="100%" style=" height: 162px !important" src="img/home/qc1.jpg" alt="" class="img-thumbnail"></a>
 							</div>
 							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
-								<a href="{{ asset('/homepage') }}"><img src="img/home/banner-t-1.png" alt="" class="img-thumbnail"></a>
+								<a href="{{ asset('/homepage') }}"><img width="100%"  style=" height: 162px !important" src="img/home/qc2.jpg" alt="" class="img-thumbnail"></a>
 							</div>
 						</div>
 					</div>
@@ -306,30 +241,6 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="contact-icon">
-                <i class="fa fa-comments contact-icon" aria-hidden="true"></i>
-            </div>
-            <div class="contact hidden">
-				@include('errors.note')
-                <form method="post">
-                    @csrf
-                    <h3 class="contact-title">Cảm ơn quý khách đã quan tâm tới MLD Shop! Xin vui lòng hoàn thành biểu mẫu dưới đây</h3>
-					<i class="fa fa-times close-btn close-contact" aria-hidden="true"></i>
-                    <label for="">Họ và tên</label>
-                    <div>
-                        <input type="text" name="name" id="" required>
-                    </div>
-                    <label for="">Số điện thoại <span style="color: red;">*</span></label>
-                    <div>
-                        <input type="text" name="phone_number" id="" required>
-                    </div>
-                    <label for="">Câu hỏi của bạn <span style="color: red;">*</span></label>
-                    <div>
-                        <input style="padding: 11px" type="text" name="question" id="" required max="255">
-                    </div>
-                    <button class="submit-contact-btn close-contact" type="submit">Gửi</button>
-                </form>
             </div>
         </div>
     </section>
@@ -342,42 +253,28 @@
                     <div class="row">
                         <div id="logo" class="col-md-3 col-sm-12 col-xs-12">
 							<a style="text-decoration: none;" href="{{ asset('/homepage') }}">
-                                <img src="img/home/logo2.png" alt="">
+                                <img src="img/home/logomain.png" alt="">
                             </a>
                         </div>
                         <div id="about" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>About us</h3>
-                            <p class="text-justify">MLDShop thành lập năm 2022. Chúng tôi là nhà cung cấp các sản phẩm công nghệ hàng đầu Việt Nam cũng như trên toàn thế giới.</p>
+                            <p class="text-justify">Chiến Đồ Nam thành lập năm 2022. Chúng tôi là nhà cung cấp các sản phẩm công nghệ hàng đầu Việt Nam cũng như trên toàn thế giới.</p>
                         </div>
                         <div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Hotline</h3>
-                            <p>Phone1: (+84) 523629227</p>
-                            <p>Phone2: (+84) 983532154</p>
-                            <p>Email: dungli1221@gmail.com</p>
+                            <p>Phone1: (+84) 633543311</p>
+                            <p>Phone2: (+84) 553652543</p>
+                            <p>Email: chien@gmail.com</p>
                         </div>
                         <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
                             <h3>Contact Us</h3>
-                            <p>Address 1: Số 51/42 - Ngõ 85 Hạ Đình - Thanh Xuân - Hà Nội</p>
-                            <p>Address 2: Số 24 Lương Ngọc Quyến - Hàng Buồm - Hoàn Kiếm - Hà Nội</p>
+                            <p>Address 1: Số 87 Hạ Đình - Thanh Xuân - Hà Nội</p>
+                            <p>Address 2: Số 226 Định Công - Hoàng Mai - Hà Nội</p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- endfooter -->
-
-		<script>
-			var openBtn = document.querySelector('.contact-icon');
-            var closeBtn = document.querySelector('.close-btn');
-            var contactModal = document.querySelector('.contact');
-
-
-            function toggleModal() {
-                contactModal.classList.toggle('hidden');
-            }
-
-            openBtn.addEventListener('click', toggleModal);
-            closeBtn.addEventListener('click', toggleModal);
-		</script>
     </body>
     </html>

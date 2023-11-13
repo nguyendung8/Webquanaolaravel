@@ -10,7 +10,7 @@ class AccountController extends Controller
 {
     public function getAccount()
     {
-        $accounts = VpUser::Where('level', 2)->get();
+        $accounts = VpUser::Where('level', 2)->paginate(3);
 
         return view('backend.account', compact('accounts'));
     }

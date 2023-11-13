@@ -32,16 +32,12 @@
 										<input required id="img" type="file" name="img" class="form-control" >
 									</div>
 									<div class="form-group" >
-										<label>Phụ kiện</label>
-										<input required type="text" name="accessories" class="form-control">
+										<label>Thương hiệu</label>
+										<input required type="text" name="trademark" class="form-control">
 									</div>
 									<div class="form-group" >
-										<label>Bảo hành</label>
-										<input required type="text" name="warranty" class="form-control">
-									</div>
-									<div class="form-group" >
-										<label>Tình trạng</label>
-										<input required type="text" name="condition" class="form-control">
+										<label>Kích cỡ</label>
+										<input required type="text" name="size" class="form-control">
 									</div>
 									<div class="form-group" >
 										<label>Trạng thái</label>
@@ -53,15 +49,6 @@
 									<div class="form-group" >
 										<label>Miêu tả</label>
 										<textarea class="ckeditor" required name="description"></textarea>
-										{{-- <script type="text/javascript">
-											var editor= CKEDITOR.replace('description',{
-											language:'vi',
-											filebrowerImageBrowseUrl:'../../editor/ckfinder/ckfinder.html?Type=Images',
-											filebrowerFlashBrowseUrl:'../../editor/ckfinder/ckfinder.html?Type=Flash',
-											filebrowerImageUploadUrl:'../../editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-											filebrowerFlashUploadUrl:'../../editor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash' ,
-											});
-										</script> --}}
 									</div>
 									<div class="form-group" >
 										<label>Danh mục</label>

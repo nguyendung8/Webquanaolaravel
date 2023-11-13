@@ -10,7 +10,7 @@ class MessageController extends Controller
 {
     public function getMessage()
     {
-        $messages = VpCustomerCare::all();
+        $messages = VpCustomerCare::paginate(3);
 
         return view('backend.message', compact('messages'));
     }

@@ -33,16 +33,12 @@
 					                    <img id="avatar" width="300px" src="{{ asset('lib/storage/app/avatar/'.$product->prod_img) }}">
 									</div>
 									<div class="form-group" >
-										<label>Phụ kiện</label>
-										<input required type="text" name="accessories" class="form-control" value="{{ $product->prod_accessories}}">
+										<label>Thương hiệu</label>
+										<input required type="text" name="trademark" class="form-control" value="{{ $product->prod_trademark}}">
 									</div>
 									<div class="form-group" >
-										<label>Bảo hành</label>
-										<input required type="text" name="warranty" class="form-control" value="{{ $product->prod_warranty}}">
-									</div>
-									<div class="form-group" >
-										<label>Tình trạng</label>
-										<input required type="text" name="condition" class="form-control" value="{{ $product->prod_condition}}">
+										<label>Kích cỡ</label>
+										<input required type="text" name="size" class="form-control" value="{{ $product->prod_size}}">
 									</div>
 									<div class="form-group" >
 										<label>Trạng thái</label>

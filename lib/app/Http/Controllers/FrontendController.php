@@ -51,12 +51,9 @@ class FrontendController extends Controller
         $keyword = $result;
         $result = Str::replace(' ', '%', $result);
 
-        $prod_search = VpProduct::where ('prod_name', 'like', '%' . $result . '%')->get();
-        if(count($prod_search) == 0) {
-            return back()->withErrors(['msg' => 'Không có sản phẩm phù hợp với yêu cầu tìm kiếm của bạn']);
-        } else {
-            return view('frontend.search', compact('prod_search', 'keyword'));
-        }
+        $prod_search = VpProduct::where ('prod_name', 'like', '%' . $result . '%')->paginate(5);
+
+        return view('frontend.search', compact('prod_search', 'keyword'));
     }
     public function postQuestion(Request $request)
     {

@@ -4,7 +4,8 @@
 	<link rel="stylesheet" href="css/search.css">
 	<div id="wrap-inner">
 		<div class="products">
-			<h3>Tìm kiếm với từ khóa: <span>{{ $keyword }}</span></h3>
+            @if(count($prod_search) >=1)
+			<h3 style="text-align: center; margin-bottom: 10px;">Danh sách sản phẩm theo yêu cầu tìm kiếm</h3>
 			<div style="gap: 15px;" class="product-list row">
 				@if($errors->any())
 					<h4 class="text-danger">{{$errors->first()}}</h4>
@@ -19,7 +20,15 @@
 					</div>
 				</div>
 				@endforeach
+
 			</div>
+            <div id="pagination">
+                {{ $prod_search->links('vendor.pagination.default') }}
+            </div>
+            @else
+                <img class="d-flex" style="margin: auto;" width="500" src="img/home/emptysearch.png">
+                <p style="font-size: 30px; text-align: center;">Không có sản phẩm phù hợp với yêu cầu tìm kiếm của bạn</p>
+		    @endif
 		</div>
 	</div>
 @stop

@@ -16,6 +16,10 @@
         float: right;
         cursor: pointer;
     }
+    .panel-body #pagination {
+        display: flex;
+        justify-content: center;
+    }
 </style>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
@@ -44,6 +48,10 @@
                             {{ $message->question }}
                         </div>
                         @endforeach
+
+                        <div id="pagination">
+                            {{ $messages->links('vendor.pagination.default') }}
+                        </div>
                     </div>
                 </div>
 			</div>

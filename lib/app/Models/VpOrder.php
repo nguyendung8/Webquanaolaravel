@@ -19,4 +19,9 @@ class VpOrder extends Model
         'total_products',
         'placed_order_date',
     ];
+
+    public function getTotalPriceAttribute($value)
+    {
+        return floatval($value);
+    }
 }

@@ -13,7 +13,7 @@ class CategoryController extends Controller
 {
     public function getCategory()
     {
-        $categories = VpCategory::all();
+        $categories = VpCategory::paginate(5);
 
         return view('backend.category', compact('categories'));
     }
