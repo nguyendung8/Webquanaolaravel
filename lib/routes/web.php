@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\RevenueController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\OrderUserController;
@@ -140,6 +141,11 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('/delete/{id}', [CommentController::class, 'getDeleteComment']);
             // Duyệt bình luận
             Route::get('/confirm-comment/{id}', [CommentController::class, 'confirmComment']);
+        });
+
+        //revenue
+        Route::group(['prefix' => 'revenue'], function (){
+            Route::get('/', [RevenueController::class, 'getRevenue']);
         });
     });
 });

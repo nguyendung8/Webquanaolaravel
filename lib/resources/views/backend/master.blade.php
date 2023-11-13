@@ -40,6 +40,7 @@
 			<li class="order-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/order') }}"><i style="font-size: 18px; margin-right: 9px;" class="fa fa-cart-plus" aria-hidden="true"></i> Đơn hàng</a></li>
 			<li class="message-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/message') }}"><svg class="glyph stroked empty-message"><use xlink:href="#stroked-empty-message"></use></svg> Tin nhắn</a></li>
 			<li class="comment-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/comment') }}"><i style="font-size: 18px; margin-right: 8px;" class="fa fa-pencil-square-o" aria-hidden="true"></i> Bình luận</a></li>
+			<li class="comment-btn"><a style="display: flex !important; align-items: center;" href="{{ asset('admin/revenue') }}"><i style="font-size: 18px; margin-right: 8px;" class="fa fa-money" aria-hidden="true"></i> Doanh thu</a></li>
             <li role="presentation" class="divider"></li>
 		</ul>
 	</div><!--/.sidebar-->
