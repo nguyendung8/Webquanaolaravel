@@ -27,7 +27,7 @@ class PasswordController extends Controller
         $user->password = Hash::make($request->new_password);
         $user->save();
 
-        return redirect()->intended('/homepage');
+        return redirect()->intended('/');
     }
 
 }

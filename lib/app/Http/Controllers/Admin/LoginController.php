@@ -25,7 +25,7 @@ class LoginController extends Controller
             if (auth()->user()->level == 1) {
                 return redirect()->intended('admin/home');
             } else {
-                return redirect()->intended('/homepage');
+                return redirect()->intended('/');
             }
         } else {
             return back()->withInput()->with('error', 'Tài khoản hoặc mật khẩu chưa đúng');

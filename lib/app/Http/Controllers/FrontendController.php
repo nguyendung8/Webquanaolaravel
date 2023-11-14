@@ -65,6 +65,6 @@ class FrontendController extends Controller
         $question->user_id = Auth::id();
 
         $question->save();
-        return redirect()->intended('/homepage');
+        return redirect()->intended('/');
     }
 }

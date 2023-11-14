@@ -27,11 +27,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //trang chủ
-Route::group(['prefix' => '/homepage', 'middleware' => 'CheckLogedOut'], function (){
+Route::group(['prefix' => '/'], function (){
     Route::get('', [FrontendController::class, 'getHome']);
     // lấy ra chi tiết sản phẩm và comment
     Route::get('/detail/{id}', [FrontendController::class, 'getDetail']);
-    Route::post('/detail/{id}', [FrontendController::class, 'postComment']);
+    Route::post('/detail/{id}', [FrontendController::class, 'postComment'])->middleware('CheckLogedOut');
 
     // lấy ra các danh mục
     Route::get('/category/{id}', [FrontendController::class, 'getCategory']);
@@ -40,7 +40,7 @@ Route::group(['prefix' => '/homepage', 'middleware' => 'CheckLogedOut'], functio
     Route::get('/search', [FrontendController::class, 'getSearch']);
 
     // chăm sóc khách hàng
-    Route::post('/', [FrontendController::class, 'postQuestion']);
+    Route::post('/', [FrontendController::class, 'postQuestion'])->middleware('CheckLogedOut');
 });
 
 //Đăng ký
@@ -61,12 +61,12 @@ Route::group(['prefix' => 'list-order','middleware' => 'CheckLogedOut'], functio
 
 
 // giỏ hàng
-Route::group(['prefix' => 'cart','middleware' => 'CheckLogedOut'], function (){
+Route::group(['prefix' => 'cart'], function (){
     Route::get('/add/{id}', [CartController::class, 'getAddCart']);
     Route::get('/show', [CartController::class, 'getShowCart']);
     Route::get('/delete/{id}', [CartController::class, 'getDeleteCart']);
     Route::get('/update', [CartController::class, 'getUpdateCart']);
-    Route::post('/show', [CartController::class, 'postPayCart']);
+    Route::post('/show', [CartController::class, 'postPayCart'])->middleware('CheckLogedOut');
 
 });
 
@@ -77,7 +77,7 @@ Route::get('/complete', [CartController::class, 'getComplete'])->middleware('Che
 // Admin
 Route::group(['namespace' => 'Admin'], function () {
     //login
-    Route::group(['prefix' => '/', 'middleware' => 'CheckLogedIn'], function (){
+    Route::group(['prefix' => '/login', 'middleware' => 'CheckLogedIn'], function (){
        Route::get('/', [LoginController::class, 'getLogin']);
        Route::post('/', [LoginController::class, 'postLogin']);
     });

@@ -79,7 +79,7 @@
 					<p><a href="#">{{ $prod_featured->prod_name }}</a></p>
 					<p class="price">{{ number_format($prod_featured->prod_price,0,',','.' )}} VND</p>
 					<div class="marsk">
-						<a href="{{ asset('homepage/detail/' . $prod_featured->prod_id) }}">Xem chi tiết</a>
+						<a href="{{ asset('/detail/' . $prod_featured->prod_id) }}">Xem chi tiết</a>
 					</div>
 				</div>
 				@endforeach
@@ -99,7 +99,7 @@
 					<p><a href="#">{{ $prod_new->prod_name }}</a></p>
 					<p class="price">{{ number_format($prod_new->prod_price,0,',','.' ) }} VND</p>
 					<div class="marsk">
-						<a href="{{ asset('homepage/detail/' . $prod_new->prod_id) }}">Xem chi tiết</a>
+						<a href="{{ asset('/detail/' . $prod_new->prod_id) }}">Xem chi tiết</a>
 					</div>
 				</div>
 				@endforeach

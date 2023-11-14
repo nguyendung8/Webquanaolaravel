@@ -16,7 +16,7 @@
 					<p><a href="#">{{ $item->prod_name }}</a></p>
 					<p class="price">{{ number_format($item->prod_price,0,',','.' )}} VND</p>
 					<div class="marsk">
-						<a href="{{ asset('homepage/detail/' . $item->prod_id) }}">Xem chi tiết</a>
+						<a href="{{ asset('detail/' . $item->prod_id) }}">Xem chi tiết</a>
 					</div>
 				</div>
 				@endforeach

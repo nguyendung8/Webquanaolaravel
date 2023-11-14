@@ -21,7 +21,7 @@ class CheckUserRole
             return redirect()->intended('/');
         }
         if (auth()->check() && auth()->user()->level !== 1) {
-            return redirect()->intended('/homepage');
+            return redirect()->intended('/');
         }
 
         return $next($request);
