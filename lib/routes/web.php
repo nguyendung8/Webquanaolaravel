@@ -127,6 +127,7 @@ Route::group(['namespace' => 'Admin'], function () {
         Route::group(['prefix' => 'order'], function (){
             Route::get('/', [OrderController::class, 'getOrder']);
             Route::get('/delete/{id}', [OrderController::class, 'getDeleteOrder']);
+            Route::get('/update-status/{id}', [OrderController::class, 'UpdateOrderStatus']);
         });
 
         //account

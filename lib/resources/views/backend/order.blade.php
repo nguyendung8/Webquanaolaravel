@@ -23,6 +23,8 @@
         border-radius: 5px;
         cursor: pointer;
         padding: 0 13px;
+        display: flex;
+        align-items: center;
     }
     .update-status:hover {
         opacity: 0.9;
@@ -30,6 +32,10 @@
     .panel-body #pagination {
         display: flex;
         justify-content: center;
+    }
+    .done {
+        color: #0acb0a;
+        font-size: 18px;
     }
 </style>
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -53,6 +59,9 @@
                             <label class="customer-name">Tên khách hàng: </label>
                                 {{ $order->name }}
                             <br>
+                            <label class="customer-name">Email: </label>
+                                {{ $order->email }}
+                            <br>
                             <label class="customer-phone">Số điện thoại liên hệ: </label>
                                 {{ $order->phone }}
                             <br>
@@ -70,12 +79,15 @@
                             <br>
                             <label class="customer-phone">Trạng thái đơn hàng: </label>
                             <div style="display: flex; gap: 10px;">
+                                @if($order->order_status == 'Hoàn thành')
+                                <p class="done">Hoàn thành</p>
+                                @else
                                 <select style="width: fit-content;cursor: pointer;" required name="order-status" class="form-control">
-                                    <option value="Chờ xác nhận" @if($order->order_status == 'Chờ xác nhận') selected  @endif>Chờ xác nhận</option>
+                                    @if($order->order_status == 'Chờ xác nhận')<option value="Chờ xác nhận" @if($order->order_status == 'Chờ xác nhận') selected  @endif>Chờ xác nhận @endif</option>
                                     <option value="Đã xác nhận" @if($order->order_status == 'Đã xác nhận') selected  @endif>Đã xác nhận</option>
-                                    <option value="Đang vận chuyển" @if($order->order_status == 'Đang vận chuyển') selected  @endif>Đang vận chuyển</option>
                                 </select>
-                                <input class="update-status" type="submit" value="Cập nhật">
+                                <a href="{{ asset('admin/order/update-status/' . $order->id) }}" class="update-status">Cập nhật</a>
+                                @endif
                             </div>
                         </div>
                         @endforeach

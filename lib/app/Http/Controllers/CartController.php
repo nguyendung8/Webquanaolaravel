@@ -49,6 +49,7 @@ class CartController extends Controller
         $order->name  = $request->name;
         $order->address = $request->add;
         $order->phone = $request->phone;
+        $order->email = $request->email;
         $order->total_price = Cart::total();
         $order->total_products = Cart::content()->pluck('name')->implode('; ');
         $order->placed_order_date = now()->format('d/m/Y');
